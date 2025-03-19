@@ -1,6 +1,7 @@
 import { Code, Palette, FileText, Search } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ServicesSection() {
   const services = [
@@ -41,15 +42,22 @@ export default function ServicesSection() {
   return (
     <section className="w-full bg-white py-24">
       <div className="px-4 md:px-10 lg:px-12">
-        <div className="text-center mb-12 ">
-          <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-            Nossas Soluções
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Estratégia, performance e tecnologia para impulsionar o seu negócio
-            digital.
-          </p>
+            {/* Badge "Projetos" */}
+      <div className="flex justify-center my-4">
+        <div className="bg-blue-600/10 text-white gap-2 py-2 px-4 flex items-center rounded-full">
+          <Image src="/images/Blue.svg" alt="Logo" width={30} height={30} />
+          <h1 className="text-[#3D3D3D] text-md lg:text-lg font-semibold">Soluções</h1>
         </div>
+      </div>
+
+      {/* Título */}
+      <h2 className="text-[#18181B] text-4xl lg:text-5xl font-semibold lg:leading-tight tracking-tight mb-8 text-center">
+      Soluções que nós  <br/>
+      temos{" "}
+        <span className="bg-gradient-to-b from-[#0071DA] to-[#0024B4] bg-clip-text text-transparent">
+          BravimTech
+        </span>
+      </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {services.map((service, index) => (
